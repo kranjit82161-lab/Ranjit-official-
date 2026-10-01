@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: 0.02em;
+    background-color: #030712;
+    color: #e0f2fe;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-orbitron {
+    font-family: 'Orbitron', monospace, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: 'Share Tech Mono', monospace;
+  }
+}
+
+/* Sci-fi HUD glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.2);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.5), inset 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+.glow-arc {
+  box-shadow: 0 0 45px rgba(56, 189, 248, 0.65), 0 0 90px rgba(6, 182, 212, 0.35);
+}
+
+.glow-red {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.5), inset 0 0 15px rgba(239, 68, 68, 0.2);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.8), 0 0 24px rgba(6, 182, 212, 0.5);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.8), 0 0 24px rgba(234, 179, 8, 0.5);
+}
+
+/* Hologram grid pattern */
+.bg-grid-cyber {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.07) 1px, transparent 1px);
+}
+
+/* Subtle scanline overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+
+/* Custom cyber scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.7);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse-slow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse-slow 16s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Hacker-style Cybersecurity Glowing & Terminal utilities */
+.glow-matrix {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.45), inset 0 0 15px rgba(34, 197, 94, 0.15);
+}
+
+.glow-text-green {
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.9), 0 0 20px rgba(34, 197, 94, 0.6);
+}
+
+.terminal-header {
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.95));
+  border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.terminal-cursor::after {
+  content: '▋';
+  color: #4ade80;
+  animation: cursor-blink 1s infinite steps(2, start);
+  margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.bg-cyber-circuit {
+  background-image: radial-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 0);
+  background-size: 24px 24px;
+}

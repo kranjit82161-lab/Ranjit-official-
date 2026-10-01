@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "JARVIS AI Assistant",
+  "short_name": "JARVIS",
+  "description": "Voice-controlled holographic JARVIS assistant & Android phone controller.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#030712",
+  "theme_color": "#06b6d4",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

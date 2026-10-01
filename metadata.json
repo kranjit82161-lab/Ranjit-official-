@@ -1,0 +1,11 @@
+{
+  "name": "JARVIS AI - AI Talking Video Editor & Mobile Controller",
+  "description": "Bilingual AI Talking Video Editor and mobile assistant. Live two-way voice conversation in Hindi, Bhojpuri and English while real-time video editing runs in background.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
